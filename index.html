@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Group Spinner</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>GROUP SPINNER</h1>
+        <p>Acak peserta menjadi beberapa kelompok</p>
+    </header>
+
+    <main>
+
+        <section class="panel">
+
+            <h2>
+                Daftar Peserta
+                (<span id="participantCount">0</span>)
+            </h2>
+
+            <div
+                id="participantList"
+                class="participant-list"
+            ></div>
+
+            <div class="add-area">
+
+                <input
+                    type="text"
+                    id="participantInput"
+                    placeholder="Nama peserta"
+                >
+
+                <button id="addButton">
+                    Tambah
+                </button>
+
+            </div>
+
+            <button
+                id="deleteButton"
+                class="danger"
+            >
+                Hapus Peserta Terpilih
+            </button>
+
+        </section>
+
+        <section class="panel">
+
+            <h2>Pengaturan</h2>
+
+            <div class="setting">
+                <label for="groupCount">
+                    Jumlah kelompok
+                </label>
+
+                <input
+                    type="number"
+                    id="groupCount"
+                    min="1"
+                    max="50"
+                    value="10"
+                >
+            </div>
+
+            <div class="setting">
+                <label for="idealMembers">
+                    Anggota ideal
+                </label>
+
+                <input
+                    type="number"
+                    id="idealMembers"
+                    min="1"
+                    max="50"
+                    value="3"
+                >
+            </div>
+
+            <label class="checkbox">
+                <input
+                    type="checkbox"
+                    id="allowExtra"
+                    checked
+                >
+
+                Izinkan anggota tambahan
+            </label>
+
+            <button
+                id="spinButton"
+                class="spin-button"
+            >
+                SPIN / ACAK KELOMPOK
+            </button>
+
+            <div
+                id="errorMessage"
+                class="error"
+            ></div>
+
+        </section>
+
+    </main>
+
+    <section class="results">
+
+        <h2>Hasil Pembagian</h2>
+
+        <div
+            id="resultContainer"
+            class="result-container"
+        ></div>
+
+    </section>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
